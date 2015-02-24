@@ -15,7 +15,6 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        LightListener lightListener = new LightListener(this);
     }
 
     boolean flag = true;
@@ -27,8 +26,9 @@ public class MainActivity extends ActionBarActivity {
             flag = false;
         }
         else{
-            Intent i= new Intent(this, LightSensorService.class);
+            Intent i = new Intent(this, LightSensorService.class);
             this.stopService(i);
+            flag = true;
         }
 
     }

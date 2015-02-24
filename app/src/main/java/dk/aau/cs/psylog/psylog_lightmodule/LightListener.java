@@ -33,6 +33,7 @@ public class LightListener implements SensorEventListener {
     }
 
     public void stopSensor() {
+
         mSensorManager.unregisterListener(this);
     }
 }
