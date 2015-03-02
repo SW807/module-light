@@ -1,6 +1,7 @@
 package dk.aau.cs.psylog.psylog_lightmodule;
 
 import android.content.Context;
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -12,6 +13,8 @@ public class LightListener implements SensorEventListener, ISensor {
 
     private SensorManager mSensorManager;
     private Sensor mSensor;
+
+    private int sensorDelay;
 
     public LightListener(Context context) {
         mSensorManager = (SensorManager) context.getSystemService(Context.SENSOR_SERVICE);
@@ -34,11 +37,19 @@ public class LightListener implements SensorEventListener, ISensor {
     }
 
     public void startSensor(){
-        mSensorManager.registerListener(this, mSensor, SensorManager.SENSOR_DELAY_NORMAL);
+        mSensorManager.unregisterListener(this);
+        mSensorManager.registerListener(this, mSensor, sensorDelay);
     }
 
     public void stopSensor() {
 
         mSensorManager.unregisterListener(this);
+    }
+
+    @Override
+    public void sensorParameters(Intent intent) {
+        Log.d("lightmodule","Lightmodule set to " + intent.getIntExtra("sensorDelay",-1));
+
+        sensorDelay = intent.getIntExtra("sensorDelay",SensorManager.SENSOR_DELAY_NORMAL); //default set to slowest update
     }
 }

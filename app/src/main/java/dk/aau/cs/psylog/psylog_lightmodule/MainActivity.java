@@ -2,6 +2,7 @@ package dk.aau.cs.psylog.psylog_lightmodule;
 
 
 import android.content.Intent;
+import android.hardware.SensorManager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -22,12 +23,14 @@ public class MainActivity extends ActionBarActivity {
 
         if(flag){
             Intent i= new Intent(this, LightSensorService.class);
+            i.putExtra("sensorDelay",1);
             this.startService(i);
             flag = false;
         }
         else{
             Intent i = new Intent(this, LightSensorService.class);
-            this.stopService(i);
+            i.putExtra("sensorDelay", SensorManager.SENSOR_DELAY_NORMAL);
+            this.startService(i);
             flag = true;
         }
 
