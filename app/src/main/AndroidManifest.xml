@@ -13,7 +13,7 @@
             </intent-filter>
         </activity>
         <service
-            android:name="Service"
+            android:name="PsyLogService"
             android:label="Service"
             android:process=":my_process"
             android:exported="true">

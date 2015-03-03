@@ -22,13 +22,13 @@ public class MainActivity extends ActionBarActivity {
     public void onClick(View view) {
 
         if(flag){
-            Intent i= new Intent(this, Service.class);
+            Intent i= new Intent(this, PsyLogService.class);
             i.putExtra("sensorDelay",1);
             this.startService(i);
             flag = false;
         }
         else{
-            Intent i = new Intent(this, Service.class);
+            Intent i = new Intent(this, PsyLogService.class);
             i.putExtra("sensorDelay", SensorManager.SENSOR_DELAY_NORMAL);
             this.startService(i);
             flag = true;
