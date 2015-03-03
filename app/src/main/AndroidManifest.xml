@@ -13,7 +13,7 @@
             </intent-filter>
         </activity>
         <service
-            android:name="LightSensorService"
+            android:name="Service"
             android:label="Service"
             android:process=":my_process"
             android:exported="true">
