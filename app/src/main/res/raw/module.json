@@ -1,0 +1,12 @@
+{
+	"name": "light",
+	"_version": 1.0,
+	"tables": [
+		{
+			"name": "illuminance",
+			"columns": [
+				{ "name": "lux", "dataType": "REAL", "_unit": "lux" }
+			]
+		}
+	]
+}
