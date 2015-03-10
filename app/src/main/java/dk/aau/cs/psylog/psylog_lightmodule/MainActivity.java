@@ -30,7 +30,7 @@ public class MainActivity extends ActionBarActivity {
         else{
             Intent i = new Intent(this, PsyLogService.class);
             i.putExtra("sensorDelay", SensorManager.SENSOR_DELAY_NORMAL);
-            this.startService(i);
+            this.stopService(i);
             flag = true;
         }
 
