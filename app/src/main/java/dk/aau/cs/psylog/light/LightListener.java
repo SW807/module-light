@@ -1,4 +1,4 @@
-package dk.aau.cs.psylog.psylog_lightmodule;
+package dk.aau.cs.psylog.light;
 
 import android.content.ContentResolver;
 import android.content.ContentValues;
