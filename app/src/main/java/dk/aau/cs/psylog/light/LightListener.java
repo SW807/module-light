@@ -32,7 +32,7 @@ public class LightListener implements SensorEventListener, ISensor {
         if (sensorEvent.sensor.getType() == Sensor.TYPE_LIGHT) {
             float lx = sensorEvent.values[0];
 
-            Uri uri = Uri.parse("content://dk.aau.cs.psylog.psylog" + "/illuminance");
+            Uri uri = Uri.parse(DBAccessContract.DBACCESS_CONTENTPROVIDER + "illuminance");
 
             ContentValues content = new ContentValues();
             content.put("lux", lx);
