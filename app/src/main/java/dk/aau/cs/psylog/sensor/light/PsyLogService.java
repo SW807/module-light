@@ -1,4 +1,4 @@
-package dk.aau.cs.psylog.light;
+package dk.aau.cs.psylog.sensor.light;
 
 import dk.aau.cs.psylog.module_lib.SensorService;
 
