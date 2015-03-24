@@ -1,6 +1,7 @@
 {
 	"name": "light",
 	"_version": 1.0,
+    "_description": "Measures and stores illumination level.",
 	"tables": [
 		{
 			"name": "illuminance",
