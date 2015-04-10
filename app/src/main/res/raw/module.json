@@ -1,5 +1,6 @@
 {
 	"name": "light",
+    "_userfriendlyname": "Lys sensor",
 	"_version": 1.0,
     "_description": "Måler og opbevarer lys niveau.",
 	"tables": [
