@@ -1,7 +1,7 @@
 {
 	"name": "light",
 	"_version": 1.0,
-    "_description": "Measures and stores illumination level.",
+    "_description": "Måler og opbevarer lys niveau.",
 	"tables": [
 		{
 			"name": "illuminance",
